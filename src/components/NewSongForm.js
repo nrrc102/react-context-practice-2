@@ -1,11 +1,10 @@
-import React,{useState} from 'react'
+import React,{useState, useEffect} from 'react'
 
 const NewSongForm = ({addSong}) => {
     const [title, setTitle] = useState('');
 
     const handleSubmit = (e) =>{
         e.preventDefault();
-        console.log(title);
         addSong(title);
         setTitle('');
     }
